@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "vee-validate": "^4.11.1",
     "vue-router": "^4.2.4"
   }
 }

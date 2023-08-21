@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<style scoped>
+<style>
 .home-container {
     max-width: 800px;
     margin: 0 auto;

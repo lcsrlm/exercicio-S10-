@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import * as Yup from Yup
+
 export default {
     data() {
         return {

@@ -43,6 +43,8 @@
 
 <script>
 
+import axios from 'axios'
+
 export default {
     data() {
         return {
@@ -57,13 +59,27 @@ export default {
         }
     },
     methods: {
-        handleSubmit(){
-            const schema = Yup.object().shape({
-                name: Yup.string().required("o nome é obrigatório"),
-                email: Yup.string().email("O email é inválido").required("O email é obrigatório")
-            })
-        }
-    },
+        async handleSubmit() {
+      const dadosTalento = {
+        name: this.name,
+        email: this.email,
+        date_birth: this.date_birth,
+        contact: this.zap,
+        area: this.area,
+        skills: this.skills,
+        apresentation: this.carta
+      }
+
+      try {
+        const resposta = await axios.post("http://localhost:4000/talentos", dadosTalento)
+        console.log("Talento registrado:", resposta.data)
+        alert("Bem-vindo! Talento registrado com sucesso")
+      } catch (erro) {
+        console.error("Erro ao registrar talento:", erro)
+        alert("Erro ao registrar talento, tente novamente!")
+      }
+    }
+  },
     watch: {
         area(newValue, oldValue) {
             if (newValue !== oldValue) {

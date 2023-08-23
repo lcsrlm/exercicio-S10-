@@ -1,13 +1,19 @@
 <template>
     <div class="home-container">
         <h2>Bem-vindo ao DevInHouse</h2>
-        <p>Conectando talento e oportunidade</p>
-        <a href="https://devinhouse.tech">
-            <button class="home-button">Conheça o projeto</button>
-        </a>
+        <p>Conectando talento e oportunidade</p>      
+            <button @click="buttonLink" class="home-button">Conheça o projeto</button>
     </div>
 </template>
-
+<script>
+export default {
+  methods: {
+    buttonLink (){
+      window.open("https://devinhouse.tech", "_blank")
+    }
+  }
+}
+</script>
 <style>
 .home-container {
     max-width: 800px;

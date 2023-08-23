@@ -36,7 +36,7 @@
             </div>
             <label for="carta">Carta de aprensentação</label>
             <textarea id="carta" cols="30" rows="10" v-model="carta"></textarea>
-
+            <button class="submit-button">Finalizar cadastro</button>
         </form>
     </section>
 </template>
@@ -76,17 +76,64 @@ export default {
 
 <style>
 .new-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .new-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: grid;
+  gap: 20px;
 }
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+
+select {
+  appearance: none;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 12px auto, 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(6, 121, 73, 0.8);
+  box-shadow: 0 0 5px rgba(6, 121, 73, 0.2);
+}
+
+.submit-button {
+  background-color: rgb(6, 121, 73);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: rgba(6, 121, 73, 0.8);
+}
+
 </style>

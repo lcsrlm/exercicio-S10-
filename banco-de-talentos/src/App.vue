@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import Menu from './components/Menu/Menu.vue';
-import NewTalent from './components/Talents/New/NewTalent.vue';
-import About from './components/About/About.vue';
-import Home from './components/Home/Home.vue';
+import Menu from './views/Menu/Menu.vue';
+import NewTalent from './views/Talents/New/NewTalent.vue';
+import About from './views/About/About.vue';
+import Home from './views/Home/Home.vue';
 export default {
 
   components: {

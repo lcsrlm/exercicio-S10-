@@ -45,6 +45,7 @@
 
 import axios from 'axios'
 
+
 export default {
     data() {
         return {
@@ -74,6 +75,14 @@ export default {
         const resposta = await axios.post("http://localhost:4000/talentos", dadosTalento)
         console.log("Talento registrado:", resposta.data)
         alert("Bem-vindo! Talento registrado com sucesso")
+        this.name = '',
+        this.email = '',
+        this.date_birth = '',
+        this.zap = '',
+        this.area = '',
+        this.skills = [],
+        this.carta = '',
+        this.nivel = ''
       } catch (erro) {
         console.error("Erro ao registrar talento:", erro)
         alert("Erro ao registrar talento, tente novamente!")
